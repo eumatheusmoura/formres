@@ -1,0 +1,498 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  font-size: 3rem;
+  color: #ffd000;
+}
+
+.container .titulodesc {
+  max-width: 500px;
+}
+
+.container .titulodesc h1 {
+  font-size: 3rem;
+  background-image: linear-gradient(#ffbf00, #f2a50c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+.container .titulodesc span {
+  content: url("./F6.png");
+  width: 100px;
+}
+
+.container .titulodesc p {
+  font-size: 2rem;
+  color: #ffd000;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.container .titulodesc ul {
+  list-style: none;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.container .titulodesc li {
+  font-size: 1.5rem;
+  background-image: linear-gradient(#ffbf00, #f2a50c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  position: relative;
+}
+
+.container .titulodesc li::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 3px;
+  background-color: #ffbb00;
+  position: absolute;
+  left: -20px;
+  top: 7px;
+}
+
+.container1 {
+  min-height: 100vh;
+  background: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.formulario {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #e2e3e4;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header span {
+  background: linear-gradient(#ffbf00, #f2a50c);
+  padding: 3px 7px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0b0b0b;
+}
+
+.header h1 {
+  margin-top: 20px;
+}
+
+.header p {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #7a7a7a;
+  margin-bottom: -05px;
+}
+
+.container1 .formulario .campo {
+  position: relative;
+}
+
+.container1 .formulario .campo input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 5px;
+  background-color: #f3f4f6;
+  border: 1px solid #e2e3e4;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.container1 .formulario .labelcampo {
+  color: #7a7a7a;
+  position: absolute;
+  padding: 0 0.25rem;
+  left: 5px;
+  top: 20px;
+  transition: 0.2s;
+}
+
+.container1 .formulario .campo .nomeinput:focus + .labelcampo {
+  color: #0b0b0b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: white;
+  top: -0.1rem;
+  left: 0.4rem;
+  z-index: 10;
+}
+
+.container1 .formulario .campo input:focus {
+  border-color: #ffbb00;
+  box-shadow: 0 0 0 2px #fea;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.nomeinput:not(:placeholder-shown).nomeinput:not(:focus) + .labelcampo {
+  color: #0b0b0b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  top: 2px;
+  left: 0.4rem;
+  z-index: 10;
+}
+
+.container1 .formulario .campo span {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #0b0b0b;
+  text-transform: uppercase;
+}
+
+.campo-checkbox {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.campo-checkbox span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.campo-checkbox span:hover {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #f2a50c;
+  cursor: pointer;
+}
+
+.campo-checkbox input {
+  padding-bottom: -20px;
+}
+
+.listabtn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #0b0b0b;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.listabtn:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.listabtn::before {
+  content: url("./send.svg");
+  display: inline-block;
+  position: absolute;
+  left: 25px;
+}
+
+/* ------- MODO RESPONSIVO ------- */
+
+@media (min-width: 500px) {
+  .btncta {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: #000000;
+    min-height: 0vh;
+    color: #ffd000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container .titulodesc {
+    margin: 20px;
+    max-width: 100%;
+  }
+
+  .container .titulodesc h1 {
+    font-size: 3rem;
+    background-image: linear-gradient(#ffbf00, #f2a50c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    margin-top: -10px;
+    line-height: 3.5rem;
+  }
+
+  .container .titulodesc span {
+    content: url("./F6.png");
+    width: 80px;
+  }
+
+  .container .titulodesc p {
+    font-size: 2rem;
+    color: #ffd000;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+
+  .container .titulodesc ul {
+    list-style: none;
+    margin-top: 40px;
+  }
+
+  .container .titulodesc li {
+    font-size: 1.5rem;
+    background-image: linear-gradient(#ffbf00, #f2a50c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    position: relative;
+  }
+
+  .container .titulodesc li::before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 3px;
+    background-color: #ffbb00;
+    position: absolute;
+    left: -20px;
+    top: 7px;
+  }
+
+  .container1 {
+    min-height: 0vh;
+    width: 100%;
+    background: rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+
+  .formulario {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    border: 1px solid #e2e3e4;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header span {
+    background: linear-gradient(#ffbf00, #f2a50c);
+    padding: 3px 7px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b0b0b;
+  }
+
+  .header h1 {
+    margin-top: 20px;
+  }
+
+  .header p {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #7a7a7a;
+    margin-bottom: -05px;
+  }
+
+  .container1 .formulario .campo {
+    position: relative;
+  }
+
+  .container1 .formulario .campo input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    background-color: #f3f4f6;
+    border: 1px solid #e2e3e4;
+    font-size: 1rem;
+    z-index: 1;
+  }
+
+  .container1 .formulario .labelcampo {
+    color: #7a7a7a;
+    position: absolute;
+    padding: 0 0.25rem;
+    left: 5px;
+    top: 20px;
+    transition: 0.2s;
+  }
+
+  .container1 .formulario .campo .nomeinput:focus + .labelcampo {
+    color: #0b0b0b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: white;
+    top: -0.1rem;
+    left: 0.4rem;
+    z-index: 10;
+  }
+
+  .container1 .formulario .campo input:focus {
+    border-color: #ffbb00;
+    box-shadow: 0 0 0 2px #fea;
+    background-color: white;
+    font-size: 1rem;
+  }
+
+  .nomeinput:not(:placeholder-shown).nomeinput:not(:focus) + .labelcampo {
+    color: #0b0b0b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    top: 2px;
+    left: 0.4rem;
+    z-index: 10;
+  }
+
+  .container1 .formulario .campo span {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0b0b0b;
+    text-transform: uppercase;
+  }
+
+  .campo-checkbox {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+  .campo-checkbox span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .campo-checkbox span:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #f2a50c;
+    cursor: pointer;
+  }
+
+  .campo-checkbox input {
+    padding-bottom: -20px;
+  }
+
+  .listabtn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #0b0b0b;
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .listabtn:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+
+  .listabtn::before {
+    content: url("./send.svg");
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+  }
+
+  .btncta {
+    width: 100%;
+    padding: 15px;
+    margin-top: 35px;
+    color: #0b0b0b;
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .btncta:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+
+  .btncta::after {
+    content: url("./maoemoji1.png");
+    left: 280px;
+    top: 10px;
+    display: inline-block;
+    position: absolute;
+  }
+
+  .btncta a {
+    color: #0b0b0b;
+  }
+}
